@@ -1,0 +1,22 @@
+package oldnrich.championships.user;
+
+public class User {
+    public String UserId;
+    public String Password;
+    public String Name;
+    public String Phone;
+
+    public User(String UserId, String Password, String Name, String Phone) {
+        this.UserId = UserId;
+        this.Password = Password;
+        this.Name = Name;
+        this.Phone = Phone;
+    }
+
+    public User(String UserId, String Password, String Name) {
+        this.UserId = UserId;
+        this.Password = Password;
+        this.Name = Name;
+        this.Phone = Phone;
+    }
+}

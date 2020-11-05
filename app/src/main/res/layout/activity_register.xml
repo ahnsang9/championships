@@ -56,11 +56,21 @@
         android:layout_centerHorizontal="true"
         android:ems="10" />
 
-    <Spinner
+    <EditText
+        android:id="@+id/rg_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="나이"
+        android:layout_below="@+id/rg_name"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10" />
+
+    <!--<Spinner
         android:id="@+id/spinner_year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rg_name"
+        android:layout_below="@+id/rg_age"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:entries="@array/spinenr_year"
@@ -70,12 +80,23 @@
         android:id="@+id/years"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rg_name"
-        android:layout_alignStart="@+id/rg_name"
-        android:layout_alignEnd="@+id/rg_name"
+        android:layout_below="@+id/rg_age"
+        android:layout_alignStart="@+id/rg_age"
+        android:layout_alignEnd="@+id/rg_age"
         android:layout_marginTop="10dp"
         android:hint="연령대"
-        android:textSize="18dp" />
+        android:textSize="18dp" />-->
+
+
+    <Button
+        android:id="@+id/btn_register_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sign up"
+        android:layout_below="@+id/rg_age"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"/>
 
 
 

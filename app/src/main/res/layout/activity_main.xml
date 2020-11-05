@@ -3,70 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-
-    <ImageView
-        android:id="@+id/login_icon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:src="@mipmap/loginpage_icon"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="61dp"
-        android:layout_above="@+id/et_id"
-        android:layout_marginBottom="30dp"/>
-
-    <EditText
-        android:id="@+id/et_id"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="아이디"
-        android:inputType="textPersonName"
-        android:layout_above="@+id/et_pass"
-        android:layout_centerHorizontal="true"/>
-
-    <EditText
-        android:id="@+id/et_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="비밀번호"
-        android:inputType="textPersonName"
-        android:layout_centerVertical="true"
+        android:text="로그인 성공"
+        android:textSize="30dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"/>
-
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sign in"
-        android:layout_below="@+id/et_pass"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:ems="10"/>
-
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sign up"
-        android:layout_below="@id/btn_login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:ems="10"/>
-
-    <Button
-        android:id="@+id/btn_move"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="카카오 로그인"
-        android:layout_below="@+id/btn_register"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:ems="10"/>
-
+        android:layout_centerVertical="true"/>
 
 </RelativeLayout>

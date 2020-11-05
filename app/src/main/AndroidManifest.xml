@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Championships">
         <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".SubActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -11,7 +11,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     EditText et_id, et_pass;
-    Button btn_login, btn_register, btn_move;
+    Button btn_login, btn_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +30,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_move = findViewById(R.id.btn_move);
-        btn_move.setOnClickListener(new View.OnClickListener() {
+        btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SubActivity.class);
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });

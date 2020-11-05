@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="패스워드"
+        android:hint="비밀번호"
         android:inputType="textPersonName"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"

@@ -6,11 +6,22 @@
     android:layout_height="match_parent"
     style = "@style/AppTheme">
 
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/heiroflightbold"
+        android:text="Championship"
+        android:textColor="#6A3838"
+        android:textSize="30dp" />
 
     <ImageView
         android:id="@+id/login_icon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/loginpage_icon"
         tools:layout_editor_absoluteX="138dp"
@@ -68,6 +79,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:ems="10"/>
+
+
 
 
 </RelativeLayout>

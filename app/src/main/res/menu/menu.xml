@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_search"
+        android:title="대회정보"
+        android:icon="@mipmap/icon" />
+    <item android:id="@+id/action_settings"
+        android:title="관심대회"
+        android:icon="@mipmap/glass" />
+    <item android:id="@+id/action_navigation"
+        android:title="내 정보"
+        android:icon="@mipmap/more" />
+</menu>

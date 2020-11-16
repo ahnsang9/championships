@@ -11,11 +11,6 @@ import androidx.fragment.app.Fragment;
 
 public class Fragment1 extends Fragment {
 
-    public static Fragment1 newInstance(){
-        Fragment1 fragment1 = new Fragment1();
-        return fragment1;
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

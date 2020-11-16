@@ -1,12 +1,15 @@
 package oldnrich.championships;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -15,11 +18,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_1, btn_2, btn_3;
-    BottomNavigationView bottomNavigationView;
-    Fragment Fragment1;
-    Fragment Fragment2;
-    Fragment Fragment3;
+    private FragmentManager fragmentManager = getSupportFragmentManager();
+    // 4개의 메뉴에 들어갈 Fragment들
+    private Fragment1 fragment1 = new Fragment1();
+    private Fragment2 fragment2 = new Fragment2();
+    private Fragment3 fragment3 = new Fragment3();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,44 +30,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
+        // 첫 화면 지정
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.frame, fragment1).commitAllowingStateLoss();
 
-        /*btn_1 = (Button)findViewById(R.id.btn_1);
-        btn_2 = (Button)findViewById(R.id.btn_2);
-        btn_3 = (Button)findViewById(R.id.btn_3);
 
-        btn_1.setOnClickListener(new View.OnClickListener() {
+        // bottomNavigationView의 아이템이 선택될 때 호출될 리스너 등록
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                Fragment1 fragment1 = new Fragment1();
-                transaction.replace(R.id.frame, fragment1);
-                transaction.addToBackStack(null);
-                transaction.commit();
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                switch (item.getItemId()) {
+                    case R.id.info: {
+                        transaction.replace(R.id.frame, fragment1).commitAllowingStateLoss();
+                        break;
+                    }
+                    case R.id.interesting: {
+                        transaction.replace(R.id.frame, fragment2).commitAllowingStateLoss();
+                        break;
+                    }
+                    case R.id.my_info: {
+                        transaction.replace(R.id.frame, fragment3).commitAllowingStateLoss();
+                        break;
+                    }
+                }
+                    return true;
             }
         });
-
-        btn_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                Fragment2 fragment2 = new Fragment2();
-                transaction.replace(R.id.frame, fragment2);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        btn_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                Fragment3 fragment3 = new Fragment3();
-                transaction.replace(R.id.frame, fragment3);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });*/
-
     }
-
 }

@@ -1,4 +1,4 @@
-package oldnrich.championships;
+package Fragment1;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Fragment1 extends Fragment {
+import oldnrich.championships.R;
+
+public class  Fragment1 extends Fragment {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    public Fragment1() {
+        // Required empty public constructor
+    }
 
     @Nullable
     @Override

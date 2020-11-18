@@ -1,22 +1,61 @@
 package oldnrich.championships.user;
 
-public class User {
-    public String UserId;
-    public String Password;
-    public String Name;
-    public String Phone;
+public class Users {
+    private String UserId;
+    private String Password;
+    private String Name;
+    private String Phone;
+    private int Age;
 
-    public User(String UserId, String Password, String Name, String Phone) {
-        this.UserId = UserId;
-        this.Password = Password;
-        this.Name = Name;
-        this.Phone = Phone;
+    public User(){
+
     }
 
-    public User(String UserId, String Password, String Name) {
-        this.UserId = UserId;
-        this.Password = Password;
-        this.Name = Name;
-        this.Phone = Phone;
+    public User(String userId, String password, String name, String phone, int age) {
+        UserId = userId;
+        Password = password;
+        Name = name;
+        Phone = phone;
+        Age = age;
+    }
+
+    public String getUserId() {
+        return UserId;
+    }
+
+    public void setUserId(String userId) {
+        UserId = userId;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public String getPhone() {
+        return Phone;
+    }
+
+    public void setPhone(String phone) {
+        Phone = phone;
+    }
+
+    public int getAge() {
+        return Age;
+    }
+
+    public void setAge(int age) {
+        Age = age;
     }
 }

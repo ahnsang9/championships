@@ -26,6 +26,17 @@ public class RegisterRequest extends StringRequest {
 
     }
 
+//    public RegisterRequest(User user, Response.Listener<String> listener){
+//        super(Method.POST, URL, listener, null);
+//
+//        map = new HashMap<>();
+//        map.put("userID",user.getUserId());
+//        map.put("userPassword",user.getPassword());
+//        map.put("userName",user.getName());
+//        map.put("userAge",user.getAge() + "");
+//
+//    }
+
     @Override
     protected Map<String, String> getParams() throws AuthFailureError {
         return map;

@@ -1,6 +1,6 @@
 package oldnrich.championships.user;
 
-public class Users {
+public class User {
     private String UserId;
     private String Password;
     private String Name;

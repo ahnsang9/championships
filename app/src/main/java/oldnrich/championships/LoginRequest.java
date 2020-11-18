@@ -10,22 +10,9 @@ import java.util.Map;
 public class LoginRequest extends StringRequest {
 
     //서버 URL 설정 (php 파일 연동)
-    final static private String URL = "http://ahnsang9.dothome.co.kr/Login.php";
-    private Map<String, String> map;
-
-
+    final static private String URL = "http://1.230.221.210:8080/user";
 
     public LoginRequest(String userID, String userPassword, Response.Listener<String> listener){
-        super(Method.POST, URL, listener, null);
-
-        map = new HashMap<>();
-        map.put("userID",userID);
-        map.put("userPassword",userPassword);
-
-    }
-
-    @Override
-    protected Map<String, String> getParams() throws AuthFailureError {
-        return map;
+        super(Method.GET, URL+"?"+"userID="+userID+"&"+"userPassword="+userPassword, listener, null);
     }
 }

@@ -19,6 +19,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+//import oldnrich.championships.user.User;
+
 public class RegisterActivity extends AppCompatActivity {
 
     private Spinner spinner_year;
@@ -59,7 +61,6 @@ public class RegisterActivity extends AppCompatActivity {
                 String userID = rg_id.getText().toString();
                 String userPass = rg_pw.getText().toString();
                 String userName = rg_name.getText().toString();
-                //String userAge = years.getText().toString();
                 int userAge = Integer.parseInt(rg_age.getText().toString());
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -84,6 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 };
 
+                //RegisterRequest registerRequest = new RegisterRequest(userInfo,responseListener);
                 RegisterRequest registerRequest = new RegisterRequest(userID,userPass,userName,userAge,responseListener);
                 RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                 queue.add(registerRequest);

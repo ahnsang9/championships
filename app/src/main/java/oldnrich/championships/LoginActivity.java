@@ -52,8 +52,9 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
-                            if (success) {//로그인에 성공한 경우
+                            int userSeq=Integer.parseInt(jsonObject.getString("userSeq"));
+
+                            if(userSeq > 0){
                                 String userID = jsonObject.getString("userID");
                                 String userPass = jsonObject.getString("userPassword");
 
@@ -65,7 +66,6 @@ public class LoginActivity extends AppCompatActivity {
                             }
                             else { //로그인에 실패한 경우
                                 Toast.makeText(getApplicationContext(),"로그인에 실패했습니다.",Toast.LENGTH_SHORT).show();
-                                return;
                             }
                         }
                         catch (JSONException e) {

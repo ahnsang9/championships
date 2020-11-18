@@ -35,7 +35,8 @@
         android:layout_below="@+id/rg_id"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:ems="10" />
+        android:ems="10"
+        android:inputType="textPassword"/>
 
     <EditText
         android:id="@+id/rg_pw_confirm"
@@ -45,7 +46,8 @@
         android:layout_below="@+id/rg_pw"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:ems="10" />
+        android:ems="10"
+        android:inputType="textPassword"/>
 
     <EditText
         android:id="@+id/rg_name"

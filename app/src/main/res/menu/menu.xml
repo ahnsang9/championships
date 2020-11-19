@@ -9,7 +9,7 @@
     <item
         android:id="@+id/interesting"
         android:title="관심대회"
-        android:icon="@mipmap/glass" />
+        android:icon="@mipmap/magnifier" />
 
     <item
         android:id="@+id/my_info"

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".opening_competition"
+    android:layout_margin="20dp">
+
+    <EditText
+        android:id="@+id/et_competition_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="대회 이름"
+        android:inputType="textPersonName"
+        android:layout_above="@+id/category"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="종목"
+        android:inputType="textPersonName"
+        android:layout_above="@+id/location"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="장소"
+        android:inputType="textPersonName"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="인원"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/location"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="진행 방식"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/num"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/et_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="설명"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/rules"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="기간"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/et_info"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

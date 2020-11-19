@@ -3,6 +3,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">false</item>
+        <item name="colorAccent">@color/purple_200</item>
+        <item name="colorControlNormal">@color/purple_200</item>
     </style>
 
 </resources>

@@ -52,11 +52,13 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
-                            int userSeq=Integer.parseInt(jsonObject.getString("userSeq"));
+                            JSONObject dataObject = jsonObject.getJSONObject("data");
+
+                            int userSeq=Integer.parseInt(dataObject.getString("userSeq"));
 
                             if(userSeq > 0){
-                                String userID = jsonObject.getString("userID");
-                                String userPass = jsonObject.getString("userPassword");
+                                String userID = dataObject.getString("userID");
+                                String userPass = dataObject.getString("userPassword");
 
                                 Toast.makeText(getApplicationContext(),"로그인이 완료 됐습니다.",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);

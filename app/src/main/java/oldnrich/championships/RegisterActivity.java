@@ -36,7 +36,7 @@ public class RegisterActivity extends Activity implements OnClickListener {
     private static final int CROP_FROM_CAMERA = 2;
     private Uri mImageCaptureUri;
     private ImageView mPhotoImageView;
-    private ImageButton mButton;
+    private Button mButton;
 
     private EditText rg_id, rg_pw, rg_name, rg_age;
     private Button btn_register_confirm;
@@ -48,8 +48,8 @@ public class RegisterActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        mButton = (ImageButton) findViewById(R.id.profile_image);
-        mPhotoImageView = (ImageView) findViewById(R.id.image);
+        mButton = (Button) findViewById(R.id.profile_btn);
+        mPhotoImageView = (ImageView) findViewById(R.id.profile_image);
         mButton.setOnClickListener(this);
 
         rg_id = findViewById(R.id.rg_id);

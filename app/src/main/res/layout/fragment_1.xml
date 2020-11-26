@@ -8,7 +8,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp">
+    android:layout_margin="10dp">
 
     <TextView
         android:id="@+id/fragment1"
@@ -33,14 +33,24 @@
 
     <ImageButton
         android:id="@+id/open_competition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="60dp"
         android:backgroundTint="@color/white"
         android:padding="0dp"
         android:scaleType="centerInside"
-        android:src="@mipmap/openbutton" />
+        android:src="@mipmap/openbutton"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/championships_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"/>
+
+
+
 
 </RelativeLayout>

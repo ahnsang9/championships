@@ -1,12 +1,10 @@
-package oldnrich.championships;
+package oldnrich.championships.login_register;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -27,6 +25,8 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+
+import oldnrich.championships.R;
 
 
 public class RegisterActivity extends Activity implements OnClickListener {

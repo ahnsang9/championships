@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+
 
 import oldnrich.championships.championshipInfo.Fragment1;
 import oldnrich.championships.mychampionships.Fragment2;
@@ -16,7 +19,7 @@ import oldnrich.championships.mychampionships.Fragment2;
 public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
-    // 4개의 메뉴에 들어갈 Fragment들
+    // 3개의 메뉴에 들어갈 Fragment들
     private Fragment1 fragment1 = new Fragment1();
     private Fragment2 fragment2 = new Fragment2();
     private Fragment3 fragment3 = new Fragment3();
@@ -54,5 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     return true;
             }
         });
+
+
+
+
     }
 }

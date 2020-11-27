@@ -62,6 +62,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
         private TextView location;
         private ImageView championship_image;
         private LinearLayout Linear_item;
+        private Data data;
 
         ItemViewHolder(View itemView) {
             super(itemView);
@@ -74,6 +75,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
         }
 
         void onBind(Data data) {
+            this.data=data;
+
             Title.setText(data.getTitle());
             participants.setText(data.getParticipants());
             location.setText(data.getLocation());
@@ -88,7 +91,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
                     intent = new Intent(view.getContext(),championship_info.class);
                     Data data = new Data();
                     intent.putExtra("title", "왜 안되지");
-                    intent.putExtra("type", data.getType());
+                    intent.putExtra("type", this.data.getType());
                     view.getContext().startActivity(intent);
                     break;
                 }

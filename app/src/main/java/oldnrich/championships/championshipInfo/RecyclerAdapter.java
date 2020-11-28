@@ -33,14 +33,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
     public void onBindViewHolder(@NonNull RecyclerAdapter.ItemViewHolder holder, int position) {
         // Item을 하나, 하나 보여주는(bind 되는) 함수입니다.
         holder.onBind(listData.get(position));
-
-        /*holder.championship_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(view.getContext(),championship_info.class);
-                view.getContext().startActivity(intent);
-            }
-        });*/
     }
 
     @Override
@@ -66,7 +58,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
 
         ItemViewHolder(View itemView) {
             super(itemView);
-
             Title = itemView.findViewById(R.id.Title);
             participants = itemView.findViewById(R.id.participants);
             location = itemView.findViewById(R.id.location);
@@ -76,11 +67,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
 
         void onBind(Data data) {
             this.data=data;
-
-            Title.setText(data.getTitle());
-            participants.setText(data.getParticipants());
-            location.setText(data.getLocation());
-            championship_image.setImageResource(data.getResId());
+            Title.setText(data.getName());
+            participants.setText(Integer.toString(data.getParticipants()));
+            location.setText(data.getLocationX());
+            championship_image.setImageResource(R.mipmap.ic_launcher);
             Linear_item.setOnClickListener(this);
         }
 
@@ -89,9 +79,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
             switch (view.getId()){
                 case R.id.Linear_item:
                     intent = new Intent(view.getContext(),championship_info.class);
-                    Data data = new Data();
-                    intent.putExtra("title", "왜 안되지");
-                    intent.putExtra("type", this.data.getType());
+                    intent.putExtra("data",this.data);
                     view.getContext().startActivity(intent);
                     break;
                 }
